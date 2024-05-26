@@ -1,1 +1,6 @@
 # ApiReadme
+
+| Route                | Method | Req. Body                                                                                      | Response                                                                                          | Description                                    |
+|----------------------|--------|------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|------------------------------------------------|
+| /api/task/runs       | GET    | N/A                                                                                            | ```json { "taskRuns": [{ "id": 1, "startTime": "2024-05-26T10:00:00Z", "endTime": "2024-05-26T10:05:00Z", "status": "completed", "fileCount": 10, "magicCount": 5 }] }``` | Retrieve details of all task runs             |
+| `/api/config`        | POST   | ```json { "directory": "./new_directory", "interval": "*/5 * * * *", "magicString": "NEW_MAGIC_STRING" }``` | ```json { "message": "Configuration updated successfully." }```                                  | Update configuration settings for directory monitoring |
